@@ -120,10 +120,15 @@ export const createLoginEmail = async (user: UserDocument, _req: Request, next: 
 // SIGNUP
 export const signup = catchAsync(async (req, res, next) => {
   // add data to database
+  const existingUser = await User.findOne({ email: req.body.email });
+  if (existingUser) {
+    return next(new AppError("User with this email already exists", 400));
+  }
+
   const user = await User.create({
     email: req.body.email,
     password: req.body.password,
-    passwordConfirm: req.body.passwordConfirm,
+    passwordConfirm: req.body.passwordConfirm
   });
 
   try {

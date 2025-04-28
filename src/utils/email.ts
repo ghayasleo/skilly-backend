@@ -47,8 +47,8 @@ class Email {
         secure: false, // Use `true` for port 465
         auth: {
           user: "apikey", // Must be "apikey" (literal string)
-          pass: process.env.SENDGRID_PASSWORD, // Use your API Key
-        },
+          pass: process.env.SENDGRID_PASSWORD // Use your API Key
+        }
       });
     }
 
