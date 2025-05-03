@@ -364,8 +364,6 @@ export const verifyEmail = catchAsync(async (req, res, next) => {
   // encrypting token to match the one in db
   const hashedToken = crypto.createHash("sha256").update(otp).digest("hex");
 
-  console.log({ verificationToken: hashedToken, verificationTokenExpiresAt: { $gt: new Date(Date.now()) } });
-
   // checking if user exists
   const user = await User.findOne({ verificationToken: hashedToken, verificationTokenExpiresAt: { $gt: new Date(Date.now()) } });
 
