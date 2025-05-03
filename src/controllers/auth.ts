@@ -304,7 +304,7 @@ export const verifyResetPasswordOTP = catchAsync(async (req, res, next) => {
 // RESET PASSWORD
 export const resetPassword = catchAsync(async (req, res, next) => {
   // get user based on token
-  const { otp, password, password_confirm } = req.body;
+  const { otp, password, password_confirm: passwordConfirm } = req.body;
   if (!otp) {
     return next(new AppError("Please provide reset token", 400));
   }
@@ -327,7 +327,7 @@ export const resetPassword = catchAsync(async (req, res, next) => {
   // }
 
   user.password = password;
-  user.passwordConfirm = password_confirm;
+  user.passwordConfirm = passwordConfirm;
   user.passwordResetToken = undefined;
   user.passwordResetExpires = undefined;
   await user.save();
@@ -363,6 +363,8 @@ export const verifyEmail = catchAsync(async (req, res, next) => {
 
   // encrypting token to match the one in db
   const hashedToken = crypto.createHash("sha256").update(otp).digest("hex");
+
+  console.log({ verificationToken: hashedToken, verificationTokenExpiresAt: { $gt: new Date(Date.now()) } });
 
   // checking if user exists
   const user = await User.findOne({ verificationToken: hashedToken, verificationTokenExpiresAt: { $gt: new Date(Date.now()) } });
