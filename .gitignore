@@ -7,3 +7,6 @@ node_modules
 dist
 
 build
+
+src/script/venv
+src/script/__pycache__

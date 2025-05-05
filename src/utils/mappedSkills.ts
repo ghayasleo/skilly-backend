@@ -66,7 +66,13 @@ const mappedSkills = [
     ]
   },
   {
-    "AI ML": ["Machine Learning Algorithms", "Deep Learning", "Natural Language Processing", "Model Training & Evaluation", "Data Preprocessing"]
+    "AI ML Specialist": [
+      "Machine Learning Algorithms",
+      "Deep Learning",
+      "Natural Language Processing",
+      "Model Training & Evaluation",
+      "Data Preprocessing"
+    ]
   },
   {
     "Software Engineering": [
@@ -96,7 +102,7 @@ const mappedSkills = [
     ]
   },
   {
-    "Graphics Designing": [
+    "Graphics Designer": [
       "UI/UX Design",
       "Logo & Branding Design",
       "Adobe Creative Suite (Photoshop, Illustrator)",

@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
 # Load dataset
-data = pd.read_csv('./src/script/career-mapping.csv')
+data = pd.read_csv('../career-mapping.csv')
 tf.keras.models
 # Preprocess the data
 X = data.iloc[:, :-1].values  # Features

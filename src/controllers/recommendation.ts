@@ -8,7 +8,7 @@ import responseBody from "../utils/responseBody";
 
 async function runPythonScript(inputData) {
   return new Promise((resolve, reject) => {
-    const process = spawn("python3", ["./src/script/test-model.py", JSON.stringify(inputData)]);
+    const process = spawn("python3", ["./src/script/model-1/test-model.py", JSON.stringify(inputData)]);
 
     let stdoutData = "";
     let stderrData = "";
@@ -55,7 +55,7 @@ export const recommendCareerPath = catchAsync(async (req, res, next) => {
   }
 
   const recommendation = await Recommendation.create({
-    user: userId,
+    userId,
     recommendedCareer,
     recommendedSkills
   });

@@ -14,7 +14,7 @@ input_data_scaled = scaler.transform(input_data)
 
 # Load the model
 loaded_model = tf.keras.models.load_model(
-    './src/script/modified_model.h5',
+    './src/script/model-1/modified_model.h5',
     compile=False,
     custom_objects={'InputLayer': tf.keras.layers.InputLayer}
 )
