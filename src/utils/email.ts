@@ -40,7 +40,7 @@ class Email {
   }
 
   newTransport() {
-    if (process.env.NODE_ENV !== "developement") {
+    if (process.env.NODE_ENV !== "development") {
       return nodemailer.createTransport({
         host: "smtp.sendgrid.net",
         port: 587,

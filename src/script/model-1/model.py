@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
 # Load dataset
-data = pd.read_csv('../career-mapping.csv')
+data = pd.read_csv('./src/script/model-1/career-mapping.csv')
 tf.keras.models
 # Preprocess the data
 X = data.iloc[:, :-1].values  # Features
@@ -41,3 +41,5 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(32, activation='relu'),
     tf.keras.layers.Dense(len(np.unique(y)), activation='softmax')  # Output layer for multi-class classification
 ])
+
+model.save('./modified_model.h5')

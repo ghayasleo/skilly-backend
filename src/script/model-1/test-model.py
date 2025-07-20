@@ -5,9 +5,13 @@ import numpy as np
 import json
 import sys
 from model import label_encoder, scaler  # Remove X_train import
+import joblib
 
 input_inner = json.loads(sys.argv[1])
 input_data = [input_inner]  # Wrap in a list to match 2D shape
+
+scaler = joblib.load("./src/script/model-1/scaler.pkl")
+label_encoder = joblib.load("./src/script/model-1/label_encoder.pkl")
 
 # Scale the input using the pre-fitted scaler (DO NOT re-fit)
 input_data_scaled = scaler.transform(input_data)

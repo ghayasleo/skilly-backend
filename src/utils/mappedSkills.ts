@@ -1,114 +1,135 @@
 const mappedSkills = [
   {
-    "Database Fundamentals": [
-      "Relational Databases (MySQL, PostgreSQL)",
-      "NoSQL Databases (MongoDB, Cassandra)",
-      "SQL Query Optimization",
-      "Database Design & Modeling",
-      "Data Backup & Recovery"
+    "Database Administrator": [
+      "SQL",
+      "Database Backup & Recovery",
+      "Performance Tuning",
+      "Data Security",
+      "Oracle/MySQL/PostgreSQL",
+      "Database Design"
     ]
   },
   {
-    "Computer Architecture": ["Instruction Set Architecture", "Memory Hierarchy", "CPU Scheduling", "Parallel Processing", "I/O Systems"]
+    "Hardware Engineer": ["Computer Architecture", "PCB Design", "Embedded Systems", "Troubleshooting", "Hardware Testing", "Circuit Design"]
   },
   {
-    "Distributed Computing Systems": ["Cloud Computing", "Microservices Architecture", "Load Balancing", "Distributed Databases", "Fault Tolerance"]
+    "Application Support Engineer": [
+      "Issue Troubleshooting",
+      "SQL/Database Knowledge",
+      "Scripting (Shell/Python)",
+      "Application Monitoring Tools",
+      "ITIL Processes",
+      "Customer Communication"
+    ]
   },
   {
-    "Cyber Security": [
+    "Cyber Security Specialist": [
       "Network Security",
-      "Application Security",
       "Penetration Testing",
-      "Encryption Techniques",
-      "Security Compliance (e.g., GDPR, HIPAA)"
+      "Incident Response",
+      "Firewall Management",
+      "SIEM Tools",
+      "Encryption Techniques"
     ]
   },
   {
-    Networking: ["Network Protocols (TCP/IP, HTTP)", "Routing & Switching", "Network Configuration", "Firewall & VPN", "Network Monitoring Tools"]
+    "Networking Engineer": [
+      "TCP/IP",
+      "Routing & Switching",
+      "Firewall Configuration",
+      "Network Monitoring Tools",
+      "VPN & Remote Access",
+      "Cisco/Juniper Devices"
+    ]
   },
   {
-    "Software Development": ["Web Development", "Backend Development", "Mobile App Development", "Desktop App Development", "API Development"]
-  },
-  {
-    "Programming Skills": [
-      "Object-Oriented Programming",
-      "Functional Programming",
+    "Software Developer": [
+      "Programming Languages (e.g. Java, Python)",
       "Data Structures & Algorithms",
       "Version Control (Git)",
-      "Debugging & Testing"
+      "Debugging",
+      "APIs & Web Services",
+      "Database Integration"
     ]
   },
   {
-    "Project Management": [
-      "Agile Methodology",
-      "Scrum Framework",
+    "API Specialist": ["REST & SOAP APIs", "Postman/Swagger", "API Security", "JSON & XML", "API Documentation", "OAuth & Authentication"]
+  },
+  {
+    "Project Manager": [
+      "Project Planning",
+      "Agile/Scrum Methodologies",
       "Risk Management",
-      "Team Collaboration Tools (Jira, Trello)",
-      "Project Planning & Estimation"
+      "Stakeholder Communication",
+      "Budgeting",
+      "Project Management Tools (e.g. Jira, MS Project)"
     ]
   },
   {
-    "Computer Forensics Fundamentals": [
-      "Digital Evidence Handling",
-      "File System Analysis",
-      "Incident Response",
-      "Forensic Tools (EnCase, FTK)",
-      "Chain of Custody"
+    "Information Security Specialist": [
+      "Security Audits",
+      "Risk Assessment",
+      "Compliance (ISO 27001, GDPR)",
+      "Vulnerability Management",
+      "Security Tools (Nessus, Wireshark)",
+      "Access Control Policies"
     ]
   },
   {
-    "Technical Communication": [
-      "Writing Technical Documentation",
-      "Report Writing",
-      "Creating User Manuals",
-      "Diagrams & Flowcharts",
-      "Explaining Complex Concepts Simply"
+    "Technical Writer": [
+      "Technical Documentation",
+      "Markdown/LaTeX",
+      "Research & Analysis",
+      "Tools like MS Word, Confluence",
+      "API Documentation",
+      "Clarity in Writing"
     ]
   },
   {
     "AI ML Specialist": [
       "Machine Learning Algorithms",
-      "Deep Learning",
-      "Natural Language Processing",
+      "Python (NumPy, Pandas, scikit-learn)",
       "Model Training & Evaluation",
-      "Data Preprocessing"
+      "Data Preprocessing",
+      "Deep Learning (TensorFlow/PyTorch)",
+      "Mathematics & Statistics"
     ]
   },
   {
-    "Software Engineering": [
-      "Software Development Life Cycle (SDLC)",
-      "Requirement Analysis",
-      "System Design",
-      "Code Quality & Standards",
-      "Testing & Maintenance"
+    "Software tester": [
+      "Manual Testing",
+      "Automation Tools (Selenium, JUnit)",
+      "Test Case Design",
+      "Bug Tracking Systems (Jira)",
+      "Performance Testing",
+      "Regression Testing"
     ]
   },
   {
-    "Business Analysis": ["Stakeholder Requirements Gathering", "Use Case Modeling", "Process Improvement", "SWOT Analysis", "Feasibility Study"]
-  },
-  {
-    "Communication skills": ["Verbal Communication", "Written Communication", "Presentation Skills", "Active Listening", "Conflict Resolution"]
-  },
-  {
-    "Data Science": ["Data Analysis", "Data Visualization", "Statistical Modeling", "Big Data Tools (Spark, Hadoop)", "Machine Learning Integration"]
-  },
-  {
-    "Troubleshooting skills": [
-      "Root Cause Analysis",
-      "System Diagnostics",
-      "Error Logging & Interpretation",
-      "Hardware Troubleshooting",
-      "Performance Optimization"
+    "Business Analyst": [
+      "Requirements Gathering",
+      "Stakeholder Communication",
+      "Data Analysis",
+      "Process Modeling (BPMN)",
+      "Documentation",
+      "Tools (Excel, Power BI, Jira)"
     ]
   },
   {
-    "Graphics Designer": [
-      "UI/UX Design",
-      "Logo & Branding Design",
-      "Adobe Creative Suite (Photoshop, Illustrator)",
-      "Wireframing & Prototyping",
-      "Typography & Color Theory"
+    "Customer Service Executive": ["Communication Skills", "CRM Software", "Problem Solving", "Empathy", "Conflict Resolution", "Time Management"]
+  },
+  {
+    "Helpdesk Engineer": [
+      "Technical Troubleshooting",
+      "Remote Support Tools",
+      "Operating Systems",
+      "Ticketing Systems",
+      "Basic Networking",
+      "Customer Support"
     ]
+  },
+  {
+    "Graphics Designer": ["Adobe Photoshop/Illustrator", "Color Theory", "Typography", "UI/UX Principles", "Creative Thinking", "Figma/Sketch/Canva"]
   }
 ];
 
@@ -121,3 +142,20 @@ export const getMappedSkills = (skill: string) => {
 };
 
 export default getMappedSkills;
+
+// Database Administrator
+// Hardware Engineer
+// Application Support Engineer
+// Cyber Security Specialist
+// Networking Engineer
+// Software Developer
+// API Specialist
+// Project Manager
+// Information Security Specialist
+// Technical Writer
+// AI ML Specialist
+// Software tester
+// Business Analyst
+// Customer Service Executive
+// Helpdesk Engineer
+// Graphics Designer

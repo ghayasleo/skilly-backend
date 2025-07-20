@@ -8,6 +8,7 @@ const router = express.Router();
 
 router.use(authController.protect);
 
+router.get("/", recommendationController.getRecommendedCareers);
 router.post("/recommend-career", recommendationController.recommendCareerPath);
 
 const recommendationRouter = router;

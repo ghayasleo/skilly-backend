@@ -64,3 +64,20 @@ export const recommendCareerPath = catchAsync(async (req, res, next) => {
 });
 
 export const getAllCareerPaths = catchAsync(async () => null);
+
+export const getRecommendedCareers = catchAsync(async (req, res) => {
+  const { _id } = req.user;
+
+  const recommendations = await Recommendation.find({ userId: _id });
+
+  // SEND RESPONSE
+  responseBody({
+    res,
+    statusCode: 200,
+    status: "success",
+    results: recommendations.length,
+    data: {
+      recommendations
+    }
+  });
+});
