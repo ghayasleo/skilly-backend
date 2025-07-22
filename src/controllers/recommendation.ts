@@ -8,7 +8,7 @@ import responseBody from "../utils/responseBody";
 
 async function runPythonScript(inputData) {
   return new Promise((resolve, reject) => {
-    const process = spawn("python3", ["./src/script/model-1/test-model.py", JSON.stringify(inputData)]);
+    const process = spawn("python3", ["./src/script/model-2/test-model.py", JSON.stringify(inputData)]);
 
     let stdoutData = "";
     let stderrData = "";
@@ -47,7 +47,7 @@ export const recommendCareerPath = catchAsync(async (req, res, next) => {
   }
 
   const result = await runPythonScript(answers);
-  const recommendedCareer = String(result).split("step")[1].trim();
+  const recommendedCareer = String(result);
   const recommendedSkills = getMappedSkills(recommendedCareer);
 
   if (!recommendedCareer) {
